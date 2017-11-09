@@ -6,6 +6,8 @@ if(isset($_GET['approveId'])) {
   $app->redirection('admin/hotels.php');
 }
 
+
+
 $notification->markAsRead();
 $notifications  = $notification->getNotification();
 include('header.php');
