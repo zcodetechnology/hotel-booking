@@ -5,6 +5,7 @@
  * Date: 03/10/2017
  * Time: 10:44 PM
  */
+
 require_once(dirname(__FILE__) . '/config/init.php');
 require_once(dirname(__FILE__) . '/config/default_lang.php');
 require_once(APP_PATH . '/config/db_connection.php');
