@@ -1,4 +1,5 @@
 <?php
+
 include('init.php');
 $hotels = $hotel->get();
 //$search = $hotel->search();
