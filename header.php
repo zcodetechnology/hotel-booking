@@ -6,6 +6,8 @@
  * Time: 02:08 AM
  */
 //require_once ('init.php');
+
+
 $myMenus = $app->getMyMenus();
 $notify = $app->get_notify();
 $notify_action = (!empty($notify['type'])) ? $notify['type'] : '';
