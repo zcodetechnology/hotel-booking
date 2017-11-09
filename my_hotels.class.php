@@ -2,7 +2,11 @@
 	/**
 	* 
 	*/
+
+
+
 	class Hotel{
+	
 		public $tableName = "my_hotels";
 		public $roomtable = "rooms";
 		public $notifications = "notification";
@@ -17,9 +21,13 @@
 			}
 			return $my_hotels;
 		}
+		
+		
 		public function getById($id) {
 			return $db->get_value($tableName, "*", "id = '".$id."'");
 		}
+		
+		
 		public function add() {
 			global $db;
 			global $app;
@@ -48,6 +56,7 @@
 			}
 			return false;	
 		}
+		
               public function delete($id) {
               global $db;
 		      $result =$db-> get_query("DELETE  FROM " .$this->tableName." WHERE id=".$id);
@@ -62,12 +71,15 @@
 		$db->get_query("INSERT INTO ". $this->notifications." (to_user_id,from_user_id,type,message,created_at,updated_at) VALUES( '".$hotel['user_id'] ."', '".$_SESSION['user']['id'] ."','approved-hotel','approved hotel', now(),now())");
 		
 	     }
+		
            public function gethotelCount() {
 				$id = $_SESSION['user']['id'];
 
 				global $db;
 				return $db->count_value($this->tableName, " WHERE user_id= ". $id);
 			}
+		
+		
           public function getroomCount($id) {
 				//	$id = $_POST['id'];
            //$id = $_SESSION['user']['id'];
